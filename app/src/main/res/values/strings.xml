@@ -4,4 +4,7 @@
     <string name="price_hint">Deal Price</string>
     <string name="description_hint">Description</string>
     <string name="save_text">Save</string>
+    <string name="text_add_new_deal">Add New Deal</string>
+    <string name="text_delete_deal">Delete Deal</string>
+    <string name="text_logout">LogOut</string>
 </resources>
