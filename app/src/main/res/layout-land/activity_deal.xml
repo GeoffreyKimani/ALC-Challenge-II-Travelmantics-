@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DealActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deal_title"
+                    android:textSize="@dimen/text_label_sp"
+                    android:layout_marginStart="@dimen/standard_start_tv"
+                    android:layout_marginTop="@dimen/top_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <EditText
+                    android:id="@+id/txtTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title_hint"
+                    android:layout_marginStart="@dimen/margin_start_title"
+                    android:layout_marginTop="@dimen/txt_margin_large"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/title_textView"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/price_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_deal_price"
+                    android:textSize="@dimen/text_label_sp"
+                    android:layout_marginTop="@dimen/top_margin_added"
+                    android:layout_marginStart="@dimen/standard_start_tv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_textView"/>
+
+                <EditText
+                    android:id="@+id/txtPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/price_hint"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="@dimen/margin_start_price"
+                    android:layout_marginTop="@dimen/txt_margin_standard"
+                    android:layout_marginEnd="@dimen/txt_margin_standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/price_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTitle"/>
+
+                <TextView
+                    android:id="@+id/description_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_description"
+                    android:textSize="@dimen/text_label_sp"
+                    android:layout_marginStart="@dimen/standard_start_tv"
+                    android:layout_marginTop="@dimen/top_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price_textView"/>
+
+                <EditText
+                    android:id="@+id/txtDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/description_hint"
+                    android:layout_marginStart="@dimen/standard_start_tv"
+                    android:layout_marginTop="@dimen/txt_margin_standard"
+                    android:layout_marginEnd="@dimen/txt_margin_standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/description_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPrice"/>
+
+                <Button
+                    android:id="@+id/btnImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_upload_image"
+                    android:layout_marginStart="@dimen/txt_margin_standard"
+                    android:layout_marginTop="@dimen/txt_margin_standard"
+                    android:layout_marginEnd="@dimen/txt_margin_standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDescription"/>
+
+                <ImageView
+                    android:id="@+id/imageUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/screen_background_light_transparent"
+                    android:layout_marginStart="@dimen/txt_margin_standard"
+                    android:layout_marginTop="@dimen/txt_margin_standard"
+                    android:layout_marginEnd="@dimen/txt_margin_standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnImage"
+                    />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+</ScrollView>

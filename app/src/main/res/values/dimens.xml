@@ -4,4 +4,10 @@
     <dimen name="txt_margin_large">24dp</dimen>
     <dimen name="title_size">24sp</dimen>
     <dimen name="prize_size">18sp</dimen>
+    <dimen name="standard_start_tv">8dp</dimen>
+    <dimen name="text_label_sp">18sp</dimen>
+    <dimen name="top_margin">32dp</dimen>
+    <dimen name="top_margin_added">40dp</dimen>
+    <dimen name="margin_start_title">24dp</dimen>
+    <dimen name="margin_start_price">16dp</dimen>
 </resources>
