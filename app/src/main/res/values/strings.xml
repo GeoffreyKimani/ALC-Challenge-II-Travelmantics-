@@ -7,4 +7,5 @@
     <string name="text_add_new_deal">Add New Deal</string>
     <string name="text_delete_deal">Delete Deal</string>
     <string name="text_logout">LogOut</string>
+    <string name="text_upload_image">Upload Image</string>
 </resources>
