@@ -23,19 +23,18 @@ public class ListActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list);
-		FirebaseUtil.openFbReference("traveldeals", this);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.list_activity_menu, menu);
-
-		if (FirebaseUtil.isAdmin){
-			menu.findItem(R.id.insert_menu).setVisible(true);
+		MenuItem insertMenu = menu.findItem(R.id.insert_menu);
+		if (FirebaseUtil.isAdmin == true) {
+			insertMenu.setVisible(true);
 		}
 		else {
-			menu.findItem(R.id.insert_menu).setVisible(false);
+			insertMenu.setVisible(false);
 		}
 		return true;
 	}
@@ -73,6 +72,7 @@ public class ListActivity extends AppCompatActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		FirebaseUtil.openFbReference("traveldeals", this);
 		// create reference to recycler view
 		RecyclerView travelDealsRecyclerView = findViewById(R.id.rvTravelDeals);
 
