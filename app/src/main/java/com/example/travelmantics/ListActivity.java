@@ -3,6 +3,7 @@ package com.example.travelmantics;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,11 +31,11 @@ public class ListActivity extends AppCompatActivity {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.list_activity_menu, menu);
 		MenuItem insertMenu = menu.findItem(R.id.insert_menu);
-		if (FirebaseUtil.isAdmin == true) {
-			insertMenu.setVisible(true);
-		}
-		else {
-			insertMenu.setVisible(false);
+		if (FirebaseUtil.isAdmin != null){
+			if (FirebaseUtil.isAdmin == true) {
+				insertMenu.setVisible(true);
+			}
+			else {insertMenu.setVisible(false);}
 		}
 		return true;
 	}
