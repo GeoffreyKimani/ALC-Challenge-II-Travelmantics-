@@ -118,7 +118,6 @@ public class FirebaseUtil {
 				new AuthUI.IdpConfig.EmailBuilder().build(),
 				new AuthUI.IdpConfig.GoogleBuilder().build());
 
-		// TODO: Fix logIn activity with google (error: 12500)
 		// since we can't call an activity from outside we se a caller activity to start the intent
 		// Create and launch sign-in intent
 		caller.startActivityForResult(

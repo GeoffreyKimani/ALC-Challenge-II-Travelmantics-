@@ -126,21 +126,6 @@ public class DealActivity extends AppCompatActivity {
 			Uri imageUri = data.getData();
 			final StorageReference ref = mStorageRef.child(imageUri.getLastPathSegment());
 
-//			ref.putFile(imageUri).addOnSuccessListener(this, new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//				@Override
-//				public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//					String url = taskSnapshot.getMetadata().getReference().getDownloadUrl().toString();
-//					String uri = mStorageRef.getStorage().getReference().getDownloadUrl().toString();
-//					Log.d(TAG, "Url for image is: " + url);
-//					String pictureName = taskSnapshot.getStorage().getPath();
-//					deal.setImageUrl(url);
-//					deal.setImageName(pictureName);
-//					Log.d("Url", uri);
-//					Log.d("Name", pictureName);
-//					showImage(url);
-//				}
-//			});
-
 			ref.putFile(imageUri)
 					.addOnSuccessListener(this, new OnSuccessListener<UploadTask.TaskSnapshot>() {
 						@Override
